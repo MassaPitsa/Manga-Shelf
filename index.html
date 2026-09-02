@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <!-- Esta es la versión WEB: siempre en modo nube (Supabase), sin IA.
-         connect-src solo necesita permitir Supabase, no Anthropic. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: blob:; script-src 'self' 'unsafe-inline'; connect-src 'self' data: https://*.supabase.co wss://*.supabase.co;" />
+         connect-src solo necesita permitir Supabase, no Anthropic. img-src
+         aparte: sin esto las portadas/avatares/banners de Supabase Storage
+         se ven como "imagen rota" (cargar una imagen es img-src, no
+         connect-src, y por defecto hereda de default-src). -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: blob:; script-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.supabase.co; connect-src 'self' data: https://*.supabase.co wss://*.supabase.co;" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0" />
     <meta name="theme-color" content="#2a1c13" />
     <meta name="description" content="Tu biblioteca de mangas en digital: sube una foto y aparece en tu estantería." />
@@ -21,8 +24,8 @@
     <link rel="icon" href="./icons/icon-192.png" />
 
     <title>Biblioteca de Mangas</title>
-    <script type="module" crossorigin src="./assets/index-BVcNUDMQ.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-1oqngpta.css">
+    <script type="module" crossorigin src="./assets/index-CZbgLHpu.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DyJ1-bkD.css">
   </head>
   <body>
     <div id="root"></div>
