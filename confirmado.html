@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Correo verificado — Biblioteca de Mangas</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';" />
+  <style>
+    :root {
+      --room-bg-1: #16100c;
+      --room-bg-2: #221912;
+      --wood-mid: #5a3826;
+      --wood-highlight: #9c6a45;
+      --paper: #f4ead9;
+      --ink-soft: #6b5643;
+      --accent: #c98a3a;
+      --accent-soft: #e4b06a;
+      --danger: #b5453a;
+      --danger-soft: #d97567;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-deep: 0 18px 40px rgba(0, 0, 0, 0.55);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: radial-gradient(circle at 30% 20%, var(--room-bg-2), var(--room-bg-1) 70%);
+      font-family: 'Segoe UI', 'Hiragino Sans', 'Yu Gothic', system-ui, -apple-system, sans-serif;
+      color: var(--paper);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: linear-gradient(180deg, var(--wood-mid), var(--room-bg-2));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-deep);
+      padding: 36px 28px;
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 48px;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    p {
+      margin: 0 0 22px;
+      color: var(--paper);
+      opacity: 0.85;
+      font-size: 14.5px;
+      line-height: 1.55;
+    }
+
+    .note {
+      margin: -8px 0 22px;
+      font-size: 13px;
+      color: var(--ink-soft, #b8a892);
+      opacity: 0.8;
+    }
+
+    a.button {
+      display: inline-block;
+      text-decoration: none;
+      background: linear-gradient(180deg, var(--accent-soft), var(--accent));
+      color: #2a1d14;
+      font-weight: 600;
+      padding: 12px 26px;
+      border-radius: var(--radius-md);
+      font-size: 14.5px;
+    }
+
+    .card--error {
+      border-color: rgba(217, 117, 103, 0.4);
+    }
+
+    .card--error a.button {
+      background: linear-gradient(180deg, var(--danger-soft), var(--danger));
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="icon" id="icon">📚</div>
+    <h1 id="title">Verificando tu correo…</h1>
+    <p id="message">Un momento.</p>
+    <a class="button" id="action" href="./">Volver a la app</a>
+  </div>
+
+  <script>
+    (function () {
+      var hash = window.location.hash ? window.location.hash.substring(1) : '';
+      var params = new URLSearchParams(hash || window.location.search);
+      var hasError = params.get('error') || params.get('error_description');
+      var card = document.getElementById('card');
+      var icon = document.getElementById('icon');
+      var title = document.getElementById('title');
+      var message = document.getElementById('message');
+
+      if (hasError) {
+        card.classList.add('card--error');
+        icon.textContent = '⚠️';
+        title.textContent = 'Este enlace ya no funciona';
+        message.textContent = 'Puede que haya caducado o que ya lo hayas usado antes. Vuelve a la app e inicia sesión, o regístrate de nuevo si hace falta.';
+      } else {
+        icon.textContent = '✅';
+        title.textContent = '¡Correo verificado!';
+        message.textContent = 'Tu cuenta ya está activa. Puedes cerrar esta pestaña y volver a la app para iniciar sesión.';
+      }
+    })();
+  </script>
+</body>
+</html>
