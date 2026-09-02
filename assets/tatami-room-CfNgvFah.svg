@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2140"/>
+      <stop offset="55%" stop-color="#4a3450"/>
+      <stop offset="100%" stop-color="#8a5a4a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffdca8" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#e8a35c" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#e8a35c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tatamiA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8a9660"/>
+      <stop offset="100%" stop-color="#6f7c4c"/>
+    </linearGradient>
+    <linearGradient id="tatamiB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9a876"/>
+      <stop offset="100%" stop-color="#a9885c"/>
+    </linearGradient>
+    <linearGradient id="woodFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a3a26"/>
+      <stop offset="100%" stop-color="#2c1a10"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+
+  <!-- ventana / pantalla shoji con luz calida -->
+  <g>
+    <rect x="900" y="90" width="560" height="520" fill="url(#woodFrame)"/>
+    <rect x="916" y="106" width="528" height="488" fill="#f3e6c8" opacity="0.92"/>
+    <rect x="916" y="106" width="528" height="488" fill="url(#glow)"/>
+    <!-- rejilla shoji -->
+    <g stroke="#7a5636" stroke-width="6" opacity="0.65">
+      <line x1="1048" y1="106" x2="1048" y2="594"/>
+      <line x1="1180" y1="106" x2="1180" y2="594"/>
+      <line x1="916" y1="228" x2="1444" y2="228"/>
+      <line x1="916" y1="350" x2="1444" y2="350"/>
+      <line x1="916" y1="472" x2="1444" y2="472"/>
+    </g>
+    <!-- silueta de rama al otro lado del papel -->
+    <path d="M960 594 C 990 460, 970 380, 1030 280" stroke="#3a2818" stroke-width="7" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M1000 470 C 1020 450, 1045 445, 1070 430" stroke="#3a2818" stroke-width="5" fill="none" opacity="0.45" stroke-linecap="round"/>
+  </g>
+
+  <!-- bonsai -->
+  <g transform="translate(150 560)">
+    <ellipse cx="60" cy="150" rx="70" ry="14" fill="#000" opacity="0.25"/>
+    <path d="M40 150 L48 70 L72 70 L80 150 Z" fill="#4a3020"/>
+    <path d="M60 70 C 20 40, 10 -10, 55 -20 C 45 10, 60 20, 90 5 C 80 40, 95 55, 120 40 C 100 65, 60 75, 60 70 Z" fill="#4f6b3a"/>
+    <path d="M55 20 C 35 5, 30 -20, 60 -30" stroke="#3a2818" stroke-width="5" fill="none"/>
+  </g>
+
+  <!-- suelo de tatami -->
+  <g>
+    <rect x="0" y="640" width="1600" height="66" fill="url(#tatamiA)"/>
+    <rect x="0" y="706" width="1600" height="10" fill="#3a2818" opacity="0.5"/>
+    <rect x="0" y="716" width="1600" height="90" fill="url(#tatamiB)"/>
+    <rect x="0" y="806" width="1600" height="10" fill="#3a2818" opacity="0.5"/>
+    <rect x="0" y="816" width="1600" height="84" fill="url(#tatamiA)"/>
+    <g stroke="#3a2818" stroke-width="2" opacity="0.25">
+      <line x1="0" y1="670" x2="1600" y2="670"/>
+      <line x1="0" y1="760" x2="1600" y2="760"/>
+      <line x1="0" y1="858" x2="1600" y2="858"/>
+    </g>
+  </g>
+</svg>

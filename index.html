@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Esta es la versión WEB: siempre en modo nube (Supabase), sin IA.
+         connect-src solo necesita permitir Supabase, no Anthropic. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: blob:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://*.supabase.co wss://*.supabase.co;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0" />
+    <meta name="theme-color" content="#2a1c13" />
+    <meta name="description" content="Tu biblioteca de mangas en digital: sube una foto y aparece en tu estantería." />
+
+    <!-- "Añadir a pantalla de inicio" en iPhone (Safari) -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Mis Mangas" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+    <!-- Instalación como PWA en Android/escritorio -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon-192.png" />
+
+    <title>Biblioteca de Mangas</title>
+    <script type="module" crossorigin src="./assets/index-D-INfo70.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-QKU7na1T.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

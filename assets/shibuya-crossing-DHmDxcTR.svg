@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c0f1e"/>
+      <stop offset="55%" stop-color="#171226"/>
+      <stop offset="100%" stop-color="#241522"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c1a22"/>
+      <stop offset="100%" stop-color="#08070a"/>
+    </linearGradient>
+    <radialGradient id="neonPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff5fb8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ff5fb8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="neonBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4fd3ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#4fd3ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="neonAmber" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffcf5c" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffcf5c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#night)"/>
+
+  <!-- siluetas de edificios -->
+  <g fill="#120e1c">
+    <rect x="-20" y="260" width="220" height="420"/>
+    <rect x="190" y="180" width="180" height="500"/>
+    <rect x="360" y="230" width="140" height="450"/>
+    <rect x="960" y="150" width="200" height="530"/>
+    <rect x="1150" y="220" width="160" height="460"/>
+    <rect x="1300" y="120" width="180" height="560"/>
+    <rect x="1470" y="240" width="150" height="440"/>
+  </g>
+
+  <!-- ventanas iluminadas -->
+  <g fill="#f4d98a" opacity="0.55">
+    <rect x="220" y="220" width="14" height="18"/><rect x="250" y="220" width="14" height="18"/>
+    <rect x="220" y="260" width="14" height="18"/><rect x="280" y="260" width="14" height="18"/>
+    <rect x="220" y="300" width="14" height="18"/><rect x="250" y="330" width="14" height="18"/>
+    <rect x="1000" y="200" width="14" height="18"/><rect x="1040" y="230" width="14" height="18"/>
+    <rect x="1330" y="170" width="14" height="18"/><rect x="1370" y="210" width="14" height="18"/>
+    <rect x="1400" y="260" width="14" height="18"/><rect x="1170" y="270" width="14" height="18"/>
+  </g>
+
+  <!-- resplandores de neon -->
+  <ellipse cx="330" cy="380" rx="190" ry="140" fill="url(#neonPink)"/>
+  <ellipse cx="1120" cy="360" rx="220" ry="160" fill="url(#neonBlue)"/>
+  <ellipse cx="1420" cy="420" rx="170" ry="130" fill="url(#neonAmber)"/>
+  <ellipse cx="760" cy="300" rx="160" ry="110" fill="url(#neonPink)" opacity="0.5"/>
+
+  <!-- carteles luminosos (formas abstractas, sin texto) -->
+  <g opacity="0.9">
+    <rect x="240" y="300" width="120" height="34" rx="4" fill="#ff5fb8" opacity="0.8"/>
+    <rect x="240" y="344" width="80" height="22" rx="4" fill="#ffcf5c" opacity="0.75"/>
+    <rect x="1030" y="270" width="150" height="30" rx="4" fill="#4fd3ff" opacity="0.8"/>
+    <rect x="1030" y="308" width="100" height="20" rx="4" fill="#ff5fb8" opacity="0.7"/>
+    <rect x="1340" y="330" width="110" height="26" rx="4" fill="#ffcf5c" opacity="0.8"/>
+  </g>
+
+  <!-- calle y paso de cebra -->
+  <rect x="0" y="680" width="1600" height="220" fill="url(#road)"/>
+  <g fill="#e9e4de" opacity="0.85">
+    <rect x="120" y="700" width="60" height="180" transform="skewX(-8)"/>
+    <rect x="260" y="700" width="60" height="180" transform="skewX(-8)"/>
+    <rect x="400" y="700" width="60" height="180" transform="skewX(-8)"/>
+    <rect x="540" y="700" width="60" height="180" transform="skewX(-8)"/>
+    <rect x="680" y="700" width="60" height="180" transform="skewX(-8)"/>
+    <rect x="820" y="700" width="60" height="180" transform="skewX(-8)"/>
+    <rect x="960" y="700" width="60" height="180" transform="skewX(-8)"/>
+    <rect x="1100" y="700" width="60" height="180" transform="skewX(-8)"/>
+    <rect x="1240" y="700" width="60" height="180" transform="skewX(-8)"/>
+    <rect x="1380" y="700" width="60" height="180" transform="skewX(-8)"/>
+  </g>
+  <!-- reflejo humedo de las luces en el suelo -->
+  <ellipse cx="330" cy="740" rx="150" ry="40" fill="#ff5fb8" opacity="0.18"/>
+  <ellipse cx="1120" cy="750" rx="170" ry="45" fill="#4fd3ff" opacity="0.16"/>
+</svg>
